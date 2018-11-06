@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsArbitros" value="name:idarbitro;datatype:int,name:nombrearbitro;datatype:string,name:telefono;datatype:string,name:celular;datatype:string,name:idjuego;datatype:int" />
+</info>

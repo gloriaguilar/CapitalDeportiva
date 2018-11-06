@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsEquipos" value="name:idequipo;datatype:int,name:nombreequipo;datatype:string,name:categoria;datatype:string,name:rama;datatype:string,name:entrenador;datatype:string,name:telefono;datatype:string,name:celular;datatype:string,name:correo;datatype:string" />
+	<infoitem key="UD_rsRamas" value="name:idrama;datatype:int,name:nombrerama;datatype:string" />
+	<infoitem key="UD_rsCategorias" value="name:idcategoria;datatype:int,name:nombrecategoria;datatype:string" />
+</info>

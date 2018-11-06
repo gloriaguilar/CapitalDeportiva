@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsCategorias" value="name:iscategoria;datatype:int,name:nombrecategoria;datatype:string" />
+	<infoitem key="UD_rsRamas" value="name:idrama;datatype:int,name:nombrerama;datatype:string" />
+</info>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsArbitros" value="name:idarbitro;datatype:int,name:nombrearbitro;datatype:string,name:telefono;datatype:string,name:celular;datatype:string,name:idjuego;datatype:int" />
+	<infoitem key="UD_DetailRS1" value="name:idarbitro;datatype:int,name:nombrearbitro;datatype:string,name:telefono;datatype:string,name:celular;datatype:string,name:idjuego;datatype:int" />
+	<infoitem key="UD_LiveData_params" value="1" />
+	<infoitem key="UD_LiveData_param0" value="recordID=1" />
+</info>

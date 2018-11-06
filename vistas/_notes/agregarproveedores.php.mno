@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsProveedores" value="name:idproveedor;datatype:int,name:nombreproveedor;datatype:string,name:direccion;datatype:string,name:colonia;datatype:string,name:municipio;datatype:string,name:estado;datatype:string,name:rfc;datatype:string,name:contacto;datatype:string,name:telefono;datatype:string,name:celular;datatype:string,name:correo;datatype:string,name:paginaweb;datatype:string,name:articulo;datatype:string" />
+</info>

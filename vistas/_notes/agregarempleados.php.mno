@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsEmpleados" value="name:idempleado;datatype:int,name:nombreempleado;datatype:string,name:puesto;datatype:string,name:telefono;datatype:string,name:celular;datatype:string,name:correo;datatype:string" />
+</info>

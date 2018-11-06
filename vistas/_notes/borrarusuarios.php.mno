@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_srusuarios" value="name:idusuario;datatype:int,name:imagen;datatype:string,name:nombreusuario;datatype:string,name:usuario;datatype:string,name:password;datatype:string,name:derechos;datatype:string" />
+	<infoitem key="UD_rsusuarios" value="name:idarbitro;datatype:int,name:imagen;datatype:string,name:nombrearbitro;datatype:string,name:telefono;datatype:string,name:celular;datatype:string" />
+</info>
