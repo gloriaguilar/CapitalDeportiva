@@ -39,8 +39,8 @@ a img {border:0}
                         			<td colspan="3">ACCIONES</td>
 									<td><div align='center'><a href='../agregarempleados.php'><img src='../imagenes/agregar.png' width='15' height='15' /></a></div></td>
                       			</tr>
-													<?php require("../DatosBd.php");
-													Connexiones::MostrarEmpleados();  ?>
+													<?php require("../Controllers/controllerEmpleado.php");
+													ControllerEmpleado::MostrarEmpleados();  ?>
 							</table>
                 		</td>
                         <!-- CODIGO CUERPO PAGINA -->

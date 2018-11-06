@@ -2,6 +2,7 @@
 require("Controllers/controllerArbitro.php");
 require("Controllers/controllerEquipo.php");
 require("Controllers/controllerProvedor.php");
+require("Controllers/controllerEmpleado.php");
 require_once("Connections/capitaldeportiva.php");
 $conexion=new Conneciones();
 
