@@ -3,19 +3,46 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Capital Deportiva Apodaca</title>
-			<style type="text/css">
-				a img {border:0}
-			</style>
-		<link href="estilos.css" rel="stylesheet" type="text/css" />
+		<?php include('bootstrapS.php'); ?>
 	</head>
-<body bgcolor="#006699">
-	<table width="950" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#516E96">
-  		<tr>
-    		<td ><img src="../imagenes/baner.png" alt="Capital Deporiva Apodaca" width="950" height="200" /></td>
-  		</tr>
-  		<tr>
-    		<td bgcolor="#FFFFFF" height="7"><img src="../imagenes/linea.png" /></td>
-  		</tr>
+<body>
+	<br><br>
+	<div class="container-fluid text-center">
+		<h1>Equipos del Directorio</h1><br>
+		<div class="row">
+			<div class="col-md-11 table-responsive center_horizontal">
+				<table class="table table-hover text-center">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col">Equipo</th>
+							<th scope="col">Entrenador</th>
+							<th scope="col">Rama</th>
+							<th scope="col">Categoría</th>
+							<th scope="col">Teléfono</th>
+							<th scope="col">Celular</th>
+							<th scope="col">Correo</th>
+							<th scope="col">Acciones</th>
+							<th scope="col">
+								<a href="../agregarequipos.php">
+									<img src="../imagenes/agregar.png" width="15" height="15" />
+								</a>
+							</th>
+						</tr>
+					</thead>
+					<?php
+						require("../Controllers/controllerEquipo.php");
+						ControllerEquipo::MostrarEquipo(); ?>
+										
+				</table><!--Fin tabla-->
+			</div> <!--Fin col-->
+		</div><!--Fin row-->
+		<br>
+		<p><a href="../intranet.php" class="btn btn-outline-secondary">Regresar</a></p>
+	</div><!--Fin container-->
+	<br>
+	<?php include('menulateralS.php'); ?>
+
+	<!-- <table width="950" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#516E96"> 		
   		<tr>
     		<td bgcolor="#FFFFFF">
     			<table width="950" border="0">
@@ -28,7 +55,7 @@
                        
                         <td width="2">&nbsp;</td>
                         <td width="715" valign="top">
-                        <!-- CODIGO CUERPO PAGINA -->
+                        <!-- CODIGO CUERPO PAGINA --
                 			<table border="0" cellpadding="2" cellspacing="0" width="715">
                      			<tr class="punteado">
                         		<td>EQUIPO</td>               
@@ -42,8 +69,8 @@
 									<td><a href="../agregarequipos.php"><img src="../imagenes/agregar.png" width="15" height="15" /></a></td>									
                  				</tr>
 								 <?php
-									require("../Controllers/controllerEquipo.php");
-									ControllerEquipo::MostrarEquipo(); ?>
+									// require("../Controllers/controllerEquipo.php");
+									// ControllerEquipo::MostrarEquipo(); ?>
                 			</table>
 
                                 <p align="center"><a href="../intranet.php" class="texto">Regresar</a></p>
@@ -55,13 +82,8 @@
 				</table>
 			</td>
   		</tr>
-  		<tr>
-    		<td bgcolor="#FFFFFF" height="7"><img src="../imagenes/linea.png" /></td>
-  		</tr>
-  		<tr>
-    		<td><img src="../imagenes/pie.png" alt="Capital Deporiva Apodaca" width="950" height="46" /></td>
-  		</tr>
-	</table>
+  		
+	</table> -->
 </body>
 </html>
 

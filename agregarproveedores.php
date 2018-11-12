@@ -3,19 +3,60 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Capital Deportiva Apodaca</title>
-			<style type="text/css">
-            	a img {border:0}
-            </style>
-		<link href="estilos.css" rel="stylesheet" type="text/css" />
+		<?php include('bootstrap.php') ?>		
 	</head>
-<body bgcolor="#006699">
-	<table width="950" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#516E96">
-  		<tr>
-    		<td ><img src="imagenes/baner.png" alt="Capital Deporiva Apodaca" width="950" height="200" /></td>
-        </tr>
-        <tr>
-    		<td bgcolor="#FFFFFF" height="7"><img src="../imagenes/linea.png" /></td>
-  		</tr>
+<body>
+ <!-- necesita menulateral -->
+	<br><br><br>
+	<div class="container-fluid">
+		<h1 class="text-center">Agregar árbitros</h1><br>
+		<div class="container">
+			<form action="acciones.php" enctype="multipart/form-data" method="POST">
+				<div class="form-group">
+					<label>Nombre de proveedor</label>
+					<input type="text" name="nombreproveedor" class="form-control" required/>
+				</div>
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-6">
+							<label>Dirección</label>
+							<input type="text" name="direccion" class="form-control" required/>
+						</div>
+						<div class="col-md-6">
+							<label>Estado</label>
+							<input type="text" name="estado" class="form-control" required/>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>RFC</label>
+					<input type="text" name="rfc" class="form-control uppercase" required/>
+				</div>
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-6">
+							<label>Nombre de contacto</label>
+							<input type="text" name="contacto" class="form-control" required/>
+						</div>
+						<div class="col-md-6">
+							<label>Correo</label>
+							<input type="text" name="correo" class="form-control" required/>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>Página web</label>
+					<input type="text" name="paginaweb" class="form-control" required/>
+				</div>
+				<input type="submit" class="btn btn-outline-info right m-2" name='InsertarRegistro' value="InsertarProveedor" />
+				<input type="hidden" name="MM_insert" />
+			</form>
+			<a href="vistas/listarproveedores.php" class="btn btn-outline-dark right m-2">Regresar</a> 			
+		</div>
+	</div>
+
+
+	<!-- <table width="950" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#516E96">
   		<tr>
     		<td bgcolor="#FFFFFF">
             	<table width="915" border="0">
@@ -25,7 +66,7 @@
                         <td rowspan="3" width="5">&nbsp;</td>
                   </tr>
                   <tr>
-                        <td width="200" valign="top"><?php require_once('menulateral.php'); ?></td>
+                        <td width="200" valign="top"><?php //require_once('menulateral.php'); ?></td>
                         <td width="2">&nbsp;</td>
                         <td width="715" valign="top">
                         	<form action="acciones.php" method="post">
@@ -83,6 +124,6 @@
   		<tr>
     		<td><img src="../imagenes/pie.png" alt="Capital Deporiva Apodaca" width="950" height="46" /></td>
   		</tr>
-	</table>
+	</table> -->
 </body>
 </html>

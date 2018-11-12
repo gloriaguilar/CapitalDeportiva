@@ -4,13 +4,14 @@ require("Controllers/controllerEquipo.php");
 require("Controllers/controllerProvedor.php");
 require("Controllers/controllerEmpleado.php");
 require_once("Connections/capitaldeportiva.php");
+include('bootstrap.php');
 $conexion=new Conneciones();
 
 if(isset($_FILES["fleImagen"]["name"]))
 {
     $foto=$_FILES["fleImagen"]["name"];
     $ruta=$_FILES["fleImagen"]["tmp_name"];
-    $destino="fotos/".$foto."";
+    $destino="../fotos/".$foto."";
 }
 if(isset($_POST['InsertarRegistro']))
 {
@@ -23,12 +24,13 @@ if(isset($_POST['InsertarRegistro']))
 
 switch ($variable) {
     case 'insertarArbitros':
-    copy($ruta,$destino);
-    controllerArbitro::InsertarArbitros($_POST['nombrearbitro'],$_POST['telefono'],$_POST['celular'],$destino,$conexion);
-        break; 
+        copy($ruta,$destino);
+        controllerArbitro::InsertarArbitros($_POST['nombrearbitro'],$_POST['telefono'],$_POST['celular'],$destino,$conexion);
+        header('Location:vistas/listararbitros.php');
+            break; 
     case 'listararbitros':
-    header('Location:vistas/listararbitros.php');
-        break;
+        header('Location:vistas/listararbitros.php');
+            break;
     case 'listarequipos':
         header('Location:vistas/listarequipos.php');
             break;
@@ -47,58 +49,58 @@ switch ($variable) {
             break;
     case 'ModificarArbitro':
         controllerArbitro::recolectarArbitro($_POST['idArbitro'],$conexion);
-                break;
+            break;
     case 'enviarArbitro':
         controllerArbitro::actualizaArbitro($_POST['idPersona'],$_POST['nombre'],$_POST['telefono'],$_POST['celular'],$destino,$conexion);
         header('Location:../capitaldeportiva/vistas/listararbitros.php');
-                break;
+            break;
     case 'modificarequipos':
-        ControllerEquipo::recolectaEquipo($_POST['idEquipo']);
-                break;
+        ControllerEquipo::recolectaEquipo($_POST['idEquipo'],$conexion);
+            break;
     case 'enviarEquipo':
         ControllerEquipo::ActualizarEquipo($_POST['idEquipo'],$_POST['nombreequipo'],$_POST['categoria'],$_POST['rama'],$_POST['entrenador'],$_POST['telefono'],$_POST['celular'],$_POST['correo'],$conexion);
         header('Location:../capitaldeportiva/vistas/listarequipos.php');
-                break;
+            break;
     case 'borrarequipos':
         ControllerEquipo::BorrarEquipos($_POST['idEquipo'],$conexion);
         header('Location:../capitaldeportiva/vistas/listarequipos.php');
-                break;
+            break;
     case 'insertarEquipo': 
         ControllerEquipo::InsertarEquipos($_POST['nombreequipo'],$_POST['categoria'],$_POST['rama'],$_POST['entrenador'],$_POST['telefono'],$_POST['celular'],$_POST['correo'],$conexion);
         header('Location:../capitaldeportiva/vistas/listarequipos.php');
-                break;
+            break;
     case 'modificarempleados':
         ControllerEmpleado::TraerEmpleado($_POST['idEmpleado'],$conexion);
-                break;
+            break;
     case 'enviarEmpleado':
         copy($ruta,$destino);
         ControllerEmpleado::ActualizarEmpleado($_POST['idEmpleado'],$destino,$_POST['nombrEmpleadp'],$_POST['puestoEmpleado'],$_POST['telEmpleado'],$_POST['celEmpleado'],$_POST['mailEmpleado'],$conexion);
         header('Location:../capitaldeportiva/vistas/listarempleados.php');
-        break;
+            break;
     case 'borrarempleados':
         ControllerEmpleado::EliminarEmpleado($_POST['idEmpleado'],$conexion);
         header('Location:../capitaldeportiva/vistas/listarempleados.php');
-        break;
+            break;
     case 'insertarEmpleado':
         copy($ruta,$destino);
         ControllerEmpleado::InsertarEmpleado($destino,$_POST['nombreempleado'],$_POST['puesto'],$_POST['telefono'],$_POST['celular'],$_POST['correo'],$conexion);
         header('Location:../capitaldeportiva/vistas/listarempleados.php');
-        break;
+            break;
     case 'borrarProvedor':
         ControllerProvedor::EliminarProvedor($_POST['idEquipo'],$conexion);
         header('Location:../capitaldeportiva/vistas/listarproveedores.php');
-        break;
+            break;
     case 'modificarProvedor':
         ControllerProvedor::RecolectaProvedor($_POST['idEquipo'],$conexion);
-        break;
+            break;
     case 'actualizrProvedor':
-        ControllerProvedor::ActualizarProvedor($_POST['idproveedor'],$_POST['nombreproveedor'],$_POST['direccion'],$_POST['estado'],$_POST['rfc'],$_POST['contacto'],$_POST['correo'],$_POST['paginaweb'],$conexion);             
+        ControllerProvedor::ActualizarProvedor($_POST['idproveedor'],$_POST['nombreproveedor'],$_POST['direccion'],$_POST['rfc'],$_POST['contacto'],$_POST['correo'],$_POST['paginaweb'],$conexion);             
         header('Location:../capitaldeportiva/vistas/listarproveedores.php');                                                    
-        break;
-        case 'InsertarProveedor':
+            break;
+    case 'InsertarProveedor':
         ControllerProvedor::AgregarProveedor($_POST['nombreproveedor'],$_POST['estado'],$_POST['direccion'],$_POST['rfc'],$_POST['contacto'],$_POST['correo'],$_POST['paginaweb'],$conexion);
         header('Location:../capitaldeportiva/vistas/listarproveedores.php');
-        break;
+            break;
 }
 
 ?>

@@ -1,10 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
-body {
-background: #516E96;
-} 
+
 .etiquetas {
-	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	font-style: normal;
 	line-height: normal;
@@ -12,7 +9,6 @@ background: #516E96;
 	color: #333;
 }
 .texto {
-	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 12px;
 	font-style: normal;
 	color: #000;
@@ -145,7 +141,6 @@ ul#navmenu-v a {
   display: block;
   background: #EEE;
   color: #666;
-  font: bold 10px/22px Verdana, Arial, Helvetica, sans-serif;
   text-decoration: none;
   height: auto !important;
   height: 1%; /*For IE*/
